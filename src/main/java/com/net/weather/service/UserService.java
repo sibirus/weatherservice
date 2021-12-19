@@ -30,17 +30,23 @@ public class UserService
         return userRepository.findAll();
 
     }
-    public Weather saveUser(Weather user)
+    public Weather saveWeatherDate(Weather date)
     {
-        return userRepository.save(user);
+        return userRepository.save(date);
 
     }
+    public Weather saveWeatherValue(Weather value)
+    {
+        return userRepository.save(value);
+
+    }
+
     public void deleteById(Long Id)
     {
         userRepository.deleteById(Id);
 
     }
-    public List<Weather> findByWeatherDate(java.sql.Date weatherDate)
+    public List<Weather> findByWeatherDate(String weatherDate)
     {
         return userRepository.findByWeatherDate(weatherDate);
 

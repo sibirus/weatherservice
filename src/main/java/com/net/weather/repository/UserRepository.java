@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<Weather,Long>
 {
-    List<Weather> findByWeatherDate(java.sql.Date weatherDate);
+    List<Weather> findByWeatherDate(String weatherDate);
 
 
 }
